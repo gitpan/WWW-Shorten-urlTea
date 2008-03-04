@@ -1,0 +1,11 @@
+Changes
+lib/WWW/Shorten/urlTea.pm
+Makefile.PL
+MANIFEST
+META.yml
+README
+t/00.use.t
+t/01.shorten.t
+t/02.lengthen.t
+t/pod-coverage.t
+t/pod.t

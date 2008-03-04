@@ -1,0 +1,33 @@
+WWW::Shorten::urlTea version 0.01
+=================================
+
+WWW::Shorten::urlTea is a WWW::Shorten subclass offering access to
+the urlTea API.
+
+RESOURCES
+
+Trac/SVN Site:
+   http://svn.mg2.org/projects/brandon/browser/WWW::Shorten::urlTea
+   
+INSTALLATION
+
+To install this module type the following:
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+WWW::Shorten
+
+COPYRIGHT AND LICENSE
+
+Copyright (C) 2008 Brandon Gilmore <brandon@mg2.org>
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
+
