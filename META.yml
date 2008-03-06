@@ -1,6 +1,6 @@
 ---
 name: WWW-Shorten-urlTea
-version: 0.01
+version: 0.02
 author:
   - Brandon Gilmore <brandon@mg2.org>
 abstract: Perl interface to urlTea.com
@@ -14,5 +14,5 @@ build_requires:
 provides:
   WWW::Shorten::urlTea:
     file: lib/WWW/Shorten/urlTea.pm
-    version: 0.01
+    version: 0.02
 generated_by: vim

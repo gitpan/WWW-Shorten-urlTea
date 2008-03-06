@@ -1,5 +1,9 @@
 Revision history for Perl extension WWW::Shorten::urlTea.
 
+	0.02  Wed Mar 05 2008
+		- documentation fixes
+		- minor test changes
+
 	0.01  Tue Mar 04 2008
 		- initial release
 

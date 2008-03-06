@@ -4,8 +4,8 @@ Makefile.PL
 MANIFEST
 META.yml
 README
-t/00.use.t
-t/01.shorten.t
-t/02.lengthen.t
-t/pod-coverage.t
+t/00_use.t
+t/01_shorten.t
+t/02_lengthen.t
+t/pod_coverage.t
 t/pod.t

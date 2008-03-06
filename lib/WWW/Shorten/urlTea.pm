@@ -15,8 +15,9 @@ WWW::Shorten::urlTea - Perl interface to urltea.com
 
 =head1 DESCRIPTION
 
-A Perl interface to the web site urltea.com. urlTea maintains a
-database of long URLs, each of which has a unique identifier.
+C<WWW::Shorten::urlTea> is one of the many C<WWW::Shorten> subclasses that
+provide a Perl interface to a URL-shortening service. This module provides
+access to the free service hosted at urltea.com.
 
 =cut
 
@@ -27,16 +28,13 @@ use Carp;
 use base qw/WWW::Shorten::generic Exporter/;
 
 our @EXPORT  = qw/makeashorterlink makealongerlink/;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
-=head1 Functions
+=head1 EXPORTS
 
-=head2 makeashorterlink
+=head2 makeashorterlink(C<long_url>)
 
-The function C<makeashorterlink> will call the urlTea web site passing
-it your long URL and returning the shortened version.
-
-Returns C<undef> on failure.
+Returns the shortened version of C<long_url> or C<undef> on failure.
 
 =cut
 
@@ -55,12 +53,9 @@ sub makeashorterlink ($)
     }
 }
 
-=head2 makealongerlink
+=head2 makealongerlink(C<short_url>)
 
-The function C<makealongerlink> takes a full urlTea URL and returns the
-corresponding long URL.
-
-Returns C<undef> on failure.
+Returns the full version of C<short_url> or C<undef> on failure.
 
 =cut
 
@@ -68,7 +63,7 @@ sub makealongerlink ($)
 {
     my $url = shift or croak 'No URL passed to makealongerlink';
     my $ua  = __PACKAGE__->ua();
-    
+
     # really, I should leave this logic to the user
     return undef unless ($url =~ m!^http://urltea\.com/\w+$!i);
 
@@ -82,20 +77,26 @@ sub makealongerlink ($)
 
 __END__
 
-=head2 EXPORT
+=head1 SEE ALSO
 
-makeashorterlink, makealongerlink
+=over 4
 
-=head1 SUPPORT, LICENCE, THANKS and SUCH
+=item * L<WWW::Shorten>
 
-See the main L<WWW::Shorten> docs.
+=item * L<http://urltea.com/>
+
+=back
 
 =head1 AUTHOR
 
 Brandon Gilmore <brandon@mg2.org>
 
-=head1 SEE ALSO
+=head1 COPYRIGHT AND LICENSE
 
-L<WWW::Shorten>, L<http://urltea.com/>
+Copyright (C) 2008 Brandon Gilmore
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available.
 
 =cut
